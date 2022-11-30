@@ -161,36 +161,38 @@ let Resultado14 = document.querySelector('.Resultado14');
 let btnCriar = document.querySelector('#btnCriar').
 addEventListener('click', () => {
 
+// criação de elemento (div)
     let boxElement = document.createElement("div");
     boxElement.style.width = '180px';
     boxElement.style.height = '180px';
     boxElement.style.margin = '10px';
     boxElement.style.backgroundColor = '#f00';
 
-//adiciona a classe .box na div criada
+//adiciona a classe .box na div criada (filho)
     boxElement.classList.add('box');
     document.body.appendChild(boxElement);
 
+    // função que limpa os quadrados da tela
     let limpar = document.querySelector('.limpar').addEventListener('click', () => {
         boxElement.outerHTML = "";
      })
 
      boxElement.onmouseover = function(){
-        boxElement.style.backgroundColor = corAleatoria();
+        boxElement.style.backgroundColor = getRandomColor();
      }
-})
-
+     // estilo do quadrado
 btnCriar.style.color = '#fff'
 btnCriar.style.fontWeight = 'bold';
 btnCriar.style.backgroundColor = '#424242';
 btnCriar.style.border = 'solid #ddd';
 btnCriar.style.width = '100px';
 btnCriar.style.height = '100px';
+}) //Fechamento do código da questão 16
 
 // Fim da Questão 16
 
 // Questão 17
-function corAleatoria (){  
+function getRandomColor (){  
     const letters = "0123456789ABCDEF";
     let color = "#";
     for (let i = 0; i < 6; i++) {
