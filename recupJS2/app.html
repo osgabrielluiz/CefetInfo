@@ -4,12 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="/recupJS2/style.css">
+    <script src="/recupJS2/app.js" defer></script>
     <title>Recup JS 2</title>
 </head>
 <body>
     <!-- Fazer 4, 7, 9, 14, 17, 22, 30 e 31. -->
-    <a class="links" href="questões/4.html">Questão 4</a>
+    
+    <!-- Questão 4 -->
+    <h2 class="links">Questão 4</h2>
+    <p>Refaça o script anterior, mas agora pergunte ao usuário quantos números ele deseja inserir no array. Depois, o
+        usuário vai preenchendo elemento por elemento do vetor. Ao final, exiba o array e o array ao contrário
+        (generalização do script anterior).</p>
+    <input id="valorA" type="number">
+    <input id="valorB" type="number">
+    <input id="valorC" type="number">
+    <button id="bt3">Enviar</button>
+    <p>Valores Invertidos:<p class="resultP"></p></p>
+    <!-- Fim da Questão 4 -->
+
+    <!-- Questão 7 -->
+    <h2 class="links">Questão 7</h2>
+    <p>Crie um script que pede um inteiro positivo para o usuário. Em seguida, popule uma array com os números de
+        Fibonacci, na hora de somar com os termos anteriores, some com elementos anteriores do array.</p>
+    <form>
+        <label for="num">Digite um número:</label>
+        <input type="number" name="num" id="num">
+        <button type="button" id="enviar">Enviar</button>
+    </form>
+    <div id="resultado"></div>
+    <!-- Fim da Questão 7 -->
+
+    <!-- Questão 9 -->
+    <h2 class="links">Questão 9</h2>
+    <p>Usando matriz (array de array), crie o jogo da velha. Inicialmente, as posições são variáveis vazias. O usuário
+        fornece a linha e a coluna e clica num botão, então é marcado no tabuleiro X ou O (se for o jogador 1 ou jogador
+        2).</p>
+    <section class="title">
+        <h1>Jogo da Velha</h1>
+    </section>
+    <section class="display">
+        Jogador <span class="display-player playerX">X</span>
+    </section>
+    <section class="container">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </section>
+    <section class="display announcer hide"></section>
+    <section class="controls">
+        <button id="reset">Reset</button>
+    </section>
+    <!-- Fim da Questão 9 -->
+
+    <!-- Questão 14 -->
+    <h2 class="links">Questão 14</h2>
+    <p>Observem o seguinte array: estados( "GO", "MG", "SP", "RJ", "AM", "PA" ). Preencha em um objeto “select” em
+        um formulário na tela com os elementos em ordem alfabética.</p>
+    <p>Bagunçado: GO, MG, SP, RJ, AM, PA</p>
+    <p>Arrumado: <p class="Resultado14"></p></p>
+    <!-- Fim da Questão 14 -->
+
+    <!-- Questão 22 -->
+    <h2 class="links">Questão 22</h2>
+    <p>Crie uma página com uma lista (select) com 4 opções de cores. Ao selecionar uma opção de cor, altere o plano de
+        fundo da página para a cor específica</p>
+    <div class="coresRGB">  <!--Div com os botões e cores, centralização com css-->
+        <button class="colorR">Red</button>     <!--Botão da cor Vervelho-->
+        <button class="colorG">Green</button>   <!--Botão da cor Verde-->
+        <button class="colorB">Blue</button>    <!--Botão da cor Azul-->
+        <button class="colorReset">Reset</button> <!--Botão de reset de cor-->
+    </div>
+    <!-- Fim da Questão 22  -->
+
 </body>
 </html>

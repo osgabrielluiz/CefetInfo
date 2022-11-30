@@ -83,13 +83,13 @@ const updateBoard =  (index) => {
 const announce = (type) => {
     switch(type){
        case PLAYERO_WON:
-            announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+            announcer.innerHTML = 'Jogador <span class="playerO">O</span> ganhou';
             break;
        case PLAYERX_WON:
-            announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+            announcer.innerHTML = 'Jogador <span class="playerX">X</span> ganhou';
             break;
        case TIE:
-            announcer.innerText = 'Tie';
+            announcer.innerText = 'empate';
         }
     announcer.classList.remove('hide');
 };
@@ -148,3 +148,27 @@ resetButton.addEventListener('click', resetBoard);
 
 // Fim da Questão 9
 
+// Questão 14
+let nomes = [
+    'GO', 'MG', 'SP', 'RJ', 'AM', 'PA'
+];
+nomes.sort();
+let Resultado14 = document.querySelector('.Resultado14');
+    Resultado14.innerHTML = nomes;
+// Fim da Questão 14
+
+// Questão 22
+let colorR = document.querySelector('.colorR').addEventListener("click", () =>{
+    colorR = document.body.style.backgroundColor = 'red'
+});
+let colorG = document.querySelector('.colorG').addEventListener("click", () =>{
+    colorG = document.body.style.backgroundColor = 'green'
+});
+let colorB = document.querySelector('.colorB').addEventListener("click", () =>{
+    colorB = document.body.style.backgroundColor = 'blue'
+});
+let colorReset = document.querySelector('.colorReset').addEventListener("click", () =>{
+    colorReset = document.body.style.backgroundColor = 'white'
+});
+
+// Fim da Questão 22
