@@ -157,18 +157,64 @@ let Resultado14 = document.querySelector('.Resultado14');
     Resultado14.innerHTML = nomes;
 // Fim da Questão 14
 
+// Questão 16
+let btnCriar = document.querySelector('#btnCriar').
+addEventListener('click', () => {
+
+    let boxElement = document.createElement("div");
+    boxElement.style.width = '180px';
+    boxElement.style.height = '180px';
+    boxElement.style.margin = '10px';
+    boxElement.style.backgroundColor = '#f00';
+
+//adiciona a classe .box na div criada
+    boxElement.classList.add('box');
+    document.body.appendChild(boxElement);
+
+    let limpar = document.querySelector('.limpar').addEventListener('click', () => {
+        boxElement.outerHTML = "";
+     })
+
+     boxElement.onmouseover = function(){
+        boxElement.style.backgroundColor = corAleatoria();
+     }
+})
+
+btnCriar.style.color = '#fff'
+btnCriar.style.fontWeight = 'bold';
+btnCriar.style.backgroundColor = '#424242';
+btnCriar.style.border = 'solid #ddd';
+btnCriar.style.width = '100px';
+btnCriar.style.height = '100px';
+
+// Fim da Questão 16
+
+// Questão 17
+function corAleatoria (){  
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]; }
+    return color;
+}
+    var newColor = getRandomColor(); // #E943F0
+// Fim da Questão 17
+
 // Questão 22
 let colorR = document.querySelector('.colorR').addEventListener("click", () =>{
     colorR = document.body.style.backgroundColor = 'red'
-});
+})
+
 let colorG = document.querySelector('.colorG').addEventListener("click", () =>{
     colorG = document.body.style.backgroundColor = 'green'
-});
+})
+
 let colorB = document.querySelector('.colorB').addEventListener("click", () =>{
     colorB = document.body.style.backgroundColor = 'blue'
-});
+})
+
 let colorReset = document.querySelector('.colorReset').addEventListener("click", () =>{
     colorReset = document.body.style.backgroundColor = 'white'
-});
+})
 
 // Fim da Questão 22
