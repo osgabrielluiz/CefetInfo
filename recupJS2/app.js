@@ -2,10 +2,15 @@
 let button = document.querySelector('#bt3');
 button.addEventListener('click', () =>{
     let valorA = document.querySelector('#valorA').value;
+
     let valorB = document.querySelector('#valorB').value;
+
     let valorC = document.querySelector('#valorC').value;
+
     let valoresArray = [valorA, valorB, valorC];
+    
     valoresArray.reverse();
+
     let result = document.querySelector('.resultP');
     result.innerHTML = valoresArray;
 });
@@ -149,12 +154,22 @@ resetButton.addEventListener('click', resetBoard);
 // Fim da Questão 9
 
 // Questão 14
-let nomes = [
-    'GO', 'MG', 'SP', 'RJ', 'AM', 'PA'
+const nomes = [
+    "GO",
+    "MG",
+    "SP",
+    "RJ",
+    "AM",
+    "PA"
 ];
 nomes.sort();
-let Resultado14 = document.querySelector('.Resultado14');
-    Resultado14.innerHTML = nomes;
+
+for(let i=0; i<nomes.length; i++){
+    let node = document.createElement("option");
+    let textnode = document.createTextNode(nomes[i]);
+    node.appendChild(textnode);
+    document.querySelector(".Resultado14").appendChild(node);
+}
 // Fim da Questão 14
 
 // Questão 16
@@ -177,18 +192,18 @@ addEventListener('click', () => {
         boxElement.outerHTML = "";
      })
 
-     boxElement.onmouseover = function(){
+        boxElement.onmouseover = function(){
         boxElement.style.backgroundColor = getRandomColor();
-     }
-     // estilo do quadrado
-btnCriar.style.color = '#fff'
-btnCriar.style.fontWeight = 'bold';
-btnCriar.style.backgroundColor = '#424242';
-btnCriar.style.border = 'solid #ddd';
-btnCriar.style.width = '100px';
-btnCriar.style.height = '100px';
-}) //Fechamento do código da questão 16
+    }
 
+     // estilo do quadrado
+        btnCriar.style.color = '#fff'
+        btnCriar.style.fontWeight = 'bold';
+        btnCriar.style.backgroundColor = '#424242';
+        btnCriar.style.border = 'solid #ddd';
+        btnCriar.style.width = '100px';
+        btnCriar.style.height = '100px';
+}) //Fechamento do código da questão 16
 // Fim da Questão 16
 
 // Questão 17
@@ -218,5 +233,4 @@ let colorB = document.querySelector('.colorB').addEventListener("click", () =>{
 let colorReset = document.querySelector('.colorReset').addEventListener("click", () =>{
     colorReset = document.body.style.backgroundColor = 'white'
 })
-
 // Fim da Questão 22
