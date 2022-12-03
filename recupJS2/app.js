@@ -234,3 +234,35 @@ let colorReset = document.querySelector('.colorReset').addEventListener("click",
     colorReset = document.body.style.backgroundColor = 'white'
 })
 // Fim da Questão 22
+
+// Questão 30
+function achaPalavra() 
+{
+    let input = document.getElementById("input").value; //Pegar oq foi digitado no input
+    let texto = "Lorem ipsum dolor sit amet. Qui perferendis exercitationem aut explicabo ullam ea obcaecati numquam ut illum impedit. Quo animi rerum eos nobis illo aut minima exercitationem non dignissimos velit et provident sapiente ad nihil amet sed voluptatem ducimus? "; //texto já definido no index
+    texto = texto.replaceAll(',','').replaceAll('.','');
+    let T = texto.split(" ");
+
+    let p= document.getElementById("p");
+
+    p.innerHTML = "";
+    
+    for(let i=0; i<T.length; i++)
+    {
+        if(T[i] == input) //Se
+        {
+            p.innerHTML = p.innerHTML +"<mark style='background-color:yellow; color:black'>"+ T[i] +"</mark>"+ " "    
+        }
+        else{ // Se não
+            p.innerHTML = p.innerHTML + T[i] + " "
+        }
+    }
+}
+// Fim da Questão 30
+
+// Questão 31
+function abreImg (id){
+    document.getElementById("select").innerHTML = "<img src=" +document.getElementById(id).src+ ">"
+
+}
+// Fim da Questão 31

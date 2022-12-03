@@ -1,17 +1,19 @@
-body{
+body{ /*Estilo do "corpo" da página*/
     width: 90%;
     text-align: center;
     margin: 0 auto;
     font: arial;
     font-size: 20px;
 }
-p{
+
+p{ /*Estilo dos paragrafos(p)*/
     width: 70%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 3%;
     margin-top: 1%;
 }
+
 .links{
     color:rgb(162, 0, 255);
     font-size: 30px;
@@ -26,6 +28,7 @@ p{
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
 }
+
 .tile {
     border: 1px solid rgb(0, 0, 0);
     min-width: 100px;
@@ -36,23 +39,53 @@ p{
     font-size: 50px;
     cursor: pointer;
 }
-.playerX {
+
+.playerX { /*Jogador X, jogo da velha*/
     color: #1100ff;
 }
 
-.playerO {
+.playerO { /*Jogador O, jogo da velha*/
     color: #9500ff;
 }
 
-.coresRGB{
+.coresRGB{ /*Botões que mudam a cor do "background"*/
     margin-top: 2%;
     text-align: center;
 }
 
-button{
+button{ /*Estilo do botão, questão 30*/
     padding: 15px;
 }
 
 input{
     padding: 15px;
+}
+
+.img{
+    height: 60px;
+    width: 100px;
+    margin: 10px;
+}
+#img{
+    text-align: center;
+    display: inline-block;
+}
+
+.bk{
+    background-color: #d7d7d7;
+    width: 100%;
+    height: 450px;
+}
+
+#select img{
+    width: 90%;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+}
+@media only screen and (max-device-width: 900px) {
+    #select img{
+        height: auto;
+        width: 70%;
+    }
 }
